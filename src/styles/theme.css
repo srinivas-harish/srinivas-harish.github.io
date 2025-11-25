@@ -1,0 +1,37 @@
+/* Theme switching using [data-theme] */
+
+/* Light theme */
+[data-theme="light"] {
+  --bg: #f7f9fc;
+  --bg-elev: #ffffff;
+  --text: #1b2738;
+  --text-dim: #445167;
+  --accent: #2d6cff;
+  --accent-2: #69a1ff;
+  --border: #e6eaf2;
+  --glass: rgba(255,255,255,0.7);
+  --shadow: 0 10px 24px rgba(9, 16, 28, 0.08);
+}
+
+[data-theme="light"] .experiences-title,
+[data-theme="light"] .experience-card__title,
+[data-theme="light"] .systems-title {
+  color: #020617;
+}
+
+[data-theme="light"] .nav__links a.active {
+  color: #111827;
+}
+
+[data-theme="light"] .signal-orbit__ring {
+  border-color: rgba(15, 23, 42, 0.85); /* near-black outline in light mode */
+}
+
+[data-theme="light"] .signal-orbit__core {
+  background: radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.12), rgba(15, 23, 42, 0.02));
+  box-shadow:
+    0 0 18px rgba(15, 23, 42, 0.28),
+    0 0 40px rgba(15, 23, 42, 0.18);
+}
+
+/* (Dark theme is defined in base via defaults) */

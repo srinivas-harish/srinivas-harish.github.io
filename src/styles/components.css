@@ -1,0 +1,302 @@
+/* Components: cards, work articles, contact, motion */
+
+/* Card grid (work overview) */
+.card {
+  position: relative;
+  background: color-mix(in oklab, var(--bg-elev), black 6%);
+  border: 1px solid color-mix(in oklab, var(--border), white 8%);
+  border-radius: calc(var(--radius) + 6px);
+  padding: var(--space-4);
+  box-shadow:
+    0 26px 60px rgba(2, 6, 23, 0.9),
+    0 0 0 1px rgba(15, 23, 42, 0.8);
+  transition:
+    transform var(--speed-2) var(--easing),
+    border-color var(--speed-2) var(--easing),
+    box-shadow var(--speed-2) var(--easing),
+    background var(--speed-2) var(--easing);
+  transform-style: preserve-3d;
+}
+.card__glow {
+  position: absolute;
+  inset: -30%;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(59, 130, 246, 0.42), transparent 60%),
+    radial-gradient(circle at 100% 100%, rgba(244, 114, 182, 0.32), transparent 60%);
+  opacity: 0;
+  filter: blur(34px);
+  transition: opacity 400ms var(--easing);
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in oklab, var(--accent), white 14%);
+  box-shadow:
+    0 34px 80px rgba(2, 6, 23, 0.98),
+    0 0 64px rgba(129, 140, 248, 0.7);
+  background: radial-gradient(circle at 0% 0%, rgba(37, 99, 235, 0.24), transparent 60%), var(--bg-elev);
+}
+.card:hover .card__glow {
+  opacity: 1;
+}
+.card__head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); }
+.card__title { margin: 0; font-weight: 600; }
+.card__meta { color: var(--text-dim); font-size: 0.9rem; }
+.card__desc { color: var(--text); }
+.card__image { display: block; overflow: hidden; border-radius: calc(var(--radius) - 4px); margin-bottom: var(--space-3); border: 1px solid var(--border); }
+.card__image img { width: 100%; height: auto; display: block; transform: scale(1.001); transition: transform var(--speed-2) var(--easing); }
+.card:hover .card__image img { transform: scale(1.02); }
+.card--interactive { perspective: 800px; transform-style: preserve-3d; cursor: pointer; }
+.card--interactive .card__image { position: relative; }
+.card--interactive .card__image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.06) 40%, transparent 80%); transform: translateX(-100%); transition: transform 800ms var(--easing); }
+.card--interactive:hover .card__image::after { transform: translateX(0%); }
+
+.work-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 48px);
+  padding: clamp(24px, 4vw, 40px);
+  border-radius: calc(var(--radius) + 4px);
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--bg), black 3%);
+  box-shadow: 0 24px 50px rgba(3, 8, 18, 0.45);
+  overflow: hidden;
+  transition: transform var(--speed-2) var(--easing), border-color var(--speed-2) var(--easing);
+}
+.work-item:hover { transform: translateY(-6px); border-color: color-mix(in oklab, var(--accent), white 10%); }
+
+.work-item__media {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: rgba(10, 16, 28, 0.6);
+}
+.work-item__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1.001);
+  transition: transform var(--speed-2) var(--easing);
+}
+.work-item:hover .work-item__media img { transform: scale(1.03); }
+
+.work-item__body header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: var(--space-3);
+}
+.work-item__body h3 {
+  margin: 0;
+  font-size: clamp(1.2rem, 2vw + 0.6rem, 1.8rem);
+  color: color-mix(in oklab, var(--text), white 12%);
+}
+.work-item__body .meta {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.work-item__body ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 12px;
+  color: var(--text);
+}
+.work-item__body li { line-height: 1.6; }
+
+.link {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dashed color-mix(in oklab, var(--accent), white 20%);
+  padding-bottom: 1px;
+}
+.link:hover { color: white; border-color: transparent; }
+
+.contact__grid {
+  display: grid;
+  gap: clamp(32px, 4vw, 48px);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: start;
+}
+
+.contact__box {
+  padding: clamp(24px, 3vw, 32px);
+  background: color-mix(in oklab, var(--bg), black 4%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.contact__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-3);
+}
+.icon-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text);
+  text-decoration: none;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  transition: background var(--speed-2) var(--easing), transform var(--speed-1) var(--easing);
+}
+.icon-link:hover {
+  background: color-mix(in oklab, var(--bg), black 6%);
+  transform: translateY(-2px);
+}
+
+.icon-link__label {
+  letter-spacing: 0.02em;
+}
+
+/* Animated underline for section titles */
+.section__title {
+  position: relative;
+  padding-bottom: 6px;
+}
+.section__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition: width 700ms var(--easing);
+}
+.in-view.section__title::after { width: 96px; }
+
+/* Motion */
+.has-io .fade-up {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 600ms var(--easing), transform 600ms var(--easing);
+}
+.has-io .in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Systems section */
+.section--systems {
+  background:
+    radial-gradient(1200px 900px at 10% 0%, rgba(129, 140, 248, 0.35), transparent 65%),
+    radial-gradient(1100px 900px at 100% 100%, rgba(15, 23, 42, 0.9), transparent 70%);
+}
+
+.systems-head {
+  max-width: 720px;
+  margin-bottom: var(--space-5);
+}
+
+.systems-label {
+  margin: 0 0 6px;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(148, 163, 253, 0.9);
+}
+
+.systems-title {
+  margin: 0 0 10px;
+  font-family: "Space Grotesk", Inter, sans-serif;
+  font-size: clamp(1.8rem, 2.4vw + 0.6rem, 2.6rem);
+  letter-spacing: 0.08em;
+  color: rgba(241, 245, 249, 0.98);
+}
+
+.systems-copy {
+  margin: 0;
+  color: color-mix(in oklab, var(--text), white 8%);
+}
+
+.systems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(20px, 2.4vw, 28px);
+}
+
+.card--system {
+  overflow: hidden;
+}
+
+.card__bullets {
+  margin: var(--space-2) 0 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: color-mix(in oklab, var(--text), white 6%);
+}
+
+/* Signal / contact section */
+.section--signal {
+  background:
+    radial-gradient(1000px 800px at 0% 100%, rgba(56, 189, 248, 0.24), transparent 60%),
+    radial-gradient(1200px 900px at 100% 0%, rgba(88, 28, 135, 0.32), transparent 70%);
+}
+
+.signal-copy {
+  position: relative;
+}
+
+.signal-footnote {
+  margin-top: 10px;
+  font-size: 0.92rem;
+  color: color-mix(in oklab, var(--text-dim), white 4%);
+}
+
+.signal-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.signal-orbit {
+  position: absolute;
+  inset: -60%;
+  opacity: 0.35;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+}
+
+.signal-orbit__ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(148, 163, 253, 0.6);
+}
+
+.signal-orbit__ring--outer {
+  width: 420px;
+  height: 420px;
+}
+
+.signal-orbit__ring--inner {
+  width: 260px;
+  height: 260px;
+}
+
+.signal-orbit__core {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(248, 250, 252, 0.9), rgba(129, 140, 248, 0.4));
+  box-shadow:
+    0 0 60px rgba(129, 140, 248, 0.86),
+    0 0 120px rgba(37, 99, 235, 0.9);
+}
+
+@media (max-width: 960px) {
+  .work-item {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .contact__grid { grid-template-columns: 1fr; }
+}
