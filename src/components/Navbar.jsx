@@ -18,7 +18,12 @@ function Navbar() {
           <a href="#about">Experiences</a>
           <a href="#work">Systems</a>
           <a href="#contact">Contact</a>
-          <a href="/public/resume.pdf" target="_blank" rel="noopener" className="resume">
+          <a
+            href="https://drive.google.com/drive/folders/1fHFjWtiSvaShqDPg0qArco1kUGqnaLKv?usp=sharing"
+            target="_blank"
+            rel="noopener"
+            className="resume"
+          >
             Resume
           </a>
           <button

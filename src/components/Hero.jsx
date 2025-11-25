@@ -57,7 +57,7 @@ function Hero() {
               <span>View Work</span>
             </a>
             <a
-              href="/public/resume.pdf"
+              href="https://drive.google.com/drive/folders/1fHFjWtiSvaShqDPg0qArco1kUGqnaLKv?usp=sharing"
               className="cosmic-hero__button cosmic-hero__button--ghost"
               target="_blank"
               rel="noopener noreferrer"
