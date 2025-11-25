@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0a1a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <g fill="#7aa2ff" font-family="Space Grotesk, Inter, sans-serif" font-weight="700">
+    <text x="72" y="140" font-size="56">Hohmann Transfers</text>
+    <text x="72" y="210" font-size="28" fill="#9fd0ff">Interplanetary Trajectories</text>
+  </g>
+  <g stroke="#1f2b46" fill="none" opacity=".9">
+    <circle cx="360" cy="420" r="60"/>
+    <circle cx="820" cy="420" r="120"/>
+    <path d="M420 420 C 560 180, 640 660, 700 420"/>
+  </g>
+</svg>
