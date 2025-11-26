@@ -31,9 +31,21 @@ function Projects() {
               token‑pair messaging to improve expressivity and feature reuse.
             </p>
             <ul className="card__bullets">
-              <li>Built deterministic multi‑GPU training and Nsight‑driven profiling pipeline in PyTorch.</li>
-              <li>Ran 50+ fully deterministic GLUE RTE ablations with fixed seeds and reproducible logging.</li>
-              <li>Benchmarked on AWS 8×H100 clusters using NCCL and CUDA API summaries.</li>
+              <li>
+                Developed XLRB, a transformer architecture introducing gated cross‑layer routing of QKV attention and
+                HDIM token‑pair messaging to improve expressivity and feature reuse, reducing overfitting across domains.
+              </li>
+              <li>
+                Built deterministic multi‑GPU training and Nsight profiling pipeline (PyTorch + Celery + Redis) for
+                ablations.
+              </li>
+              <li>
+                Ran 50+ fully deterministic ablations on GLUE RTE with fixed seeds, early stopping, and reproducible
+                logging.
+              </li>
+              <li>
+                Benchmarked on AWS 8×H100 cluster with NCCL; validated via CUDA API summaries and HPC profiling.
+              </li>
             </ul>
           </article>
 
@@ -57,12 +69,19 @@ function Projects() {
               tactical metrics rendered in real time.
             </p>
             <ul className="card__bullets">
-              <li>Fine‑tuned YOLOv9c and optimized inference with TensorRT / ONNX.</li>
               <li>
-                Used cuML KMeans, optical flow, and Kalman filtering to stabilize motion and estimate speed and
-                distances.
+                Fine‑tuned YOLOv9c model on broadcast soccer for player/ball detection, optimized with TensorRT/ONNX.
               </li>
-              <li>Integrated DeepSORT + ByteTrack hybrid tracking for identity stability across occlusion.</li>
+              <li>
+                Applied cuML‑based KMeans for team clustering and optical flow + Kalman filtering for motion correction.
+              </li>
+              <li>
+                Implemented perspective transforms in OpenCV/NumPy to estimate speed and relative distances from feeds.
+              </li>
+              <li>
+                Integrated DeepSORT + ByteTrack hybrid tracking logic to stabilize multi‑player identities across
+                occlusion.
+              </li>
             </ul>
           </article>
 
@@ -86,9 +105,16 @@ function Projects() {
               predictions with NASA transfer windows.
             </p>
             <ul className="card__bullets">
-              <li>Modeled second‑order ODEs in MATLAB for three‑body dynamics.</li>
-              <li>Applied RKF and Householder / Danby methods to solve Kepler and Lambert equations and compute Δv.</li>
-              <li>Generated 30M+ trajectories across decades to evaluate optimal launch windows.</li>
+              <li>
+                Simulated Earth–Mars Hohmann transfers using MATLAB and second‑order ODEs in a three‑body model.
+              </li>
+              <li>
+                Applied RKF and Householder/Danby methods to solve Kepler/Lambert equations and compute minimum Δv.
+              </li>
+              <li>
+                Generated 30M+ simulated trajectories to evaluate optimal transfers, validating NASA &apos;24 mission
+                parameters.
+              </li>
             </ul>
           </article>
         </div>

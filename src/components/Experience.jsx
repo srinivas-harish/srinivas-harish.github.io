@@ -35,17 +35,20 @@ function Experience() {
               <p className="experience-card__meta">Aug 2025 – Present</p>
               <ul className="experience-card__list">
                 <li>
-                  Designed and deployed custom PointNet and VoxelNet derived 3D CNN using differentiable voxelization
-                  and corner-level geometric supervision, achieving sub-inch dimensioning in 3PL warehouses including
-                  Home Depot.
+                  Designed custom sparse 3D CNN backbone with differentiable voxelization and N-node geometric
+                  supervision.
                 </li>
                 <li>
-                  Built Dockware’s production LiDAR-CNN pipeline and ML stack, co-developed with ex-SpaceX and Waymo
-                  founders, leading architectural decisions on model design, data and training workflows, and inference
-                  strategy.
+                  Deployed end-to-end LiDAR dimensioning system in production at Home Depot, achieving 0.87cm corner
+                  mAE.
                 </li>
                 <li>
-                  Engineered a simulated data pipeline combining LiDAR and optical flow data modeling scene dynamics to
+                  Led development of Dockware’s production LiDAR–CNN training pipeline and ML stack with ex-SpaceX and
+                  Waymo founders, driving architecture for the model, data and training workflows, and the full
+                  inference path.
+                </li>
+                <li>
+                  Engineered multi-stage simulated data pipeline with LiDAR and optical flow, modeling scene dynamics to
                   improve cross-domain perception model generalization across sensor modalities and environmental
                   conditions.
                 </li>
@@ -71,19 +74,22 @@ function Experience() {
               <p className="experience-card__meta">Jun 2025 – Jul 2025</p>
               <ul className="experience-card__list">
                 <li>
-                  Contracted by NVIDIA to develop GPU-Accelerated computer vision inference pipelines for the RTX 50
+                  Contracted by NVIDIA to develop GPU-accelerated computer vision inference pipelines for the RTX 50
                   Series.
                 </li>
                 <li>
-                  Optimized CUDA graphs and asynchronous execution streams to cut frame latency from 18.7 ms to 9.5 ms.
+                  Optimized CUDA graphs and asynchronous execution streams, cutting frame latency from 18.7ms → 9.5ms.
                 </li>
                 <li>
-                  Integrated TensorRT with CUDA Graphs and cuDNN/cuBLAS, extending the pipeline with custom CUDA
+                  Integrated TensorRT with mixed precision and cuDNN/cuBLAS, extending pipeline with custom CUDA
                   kernels.
                 </li>
                 <li>
-                  Profiled RTX Blackwell GPUs with Nsight Systems/Compute and NVTX for kernel-level performance tuning,
-                  and deployed containerized demos with Docker + FastAPI showcased on NVIDIA.com.
+                  Profiled RTX Blackwell GPUs using Nsight Systems/Compute and NVTX for kernel-level performance tuning.
+                </li>
+                <li>
+                  Featured on NVIDIA.com: Deployed containerized stack with Docker+FastAPI for RTX demos at NVIDIA
+                  events.
                 </li>
               </ul>
             </div>
