@@ -32,19 +32,19 @@ function Projects() {
             </p>
             <ul className="card__bullets">
               <li>
-                Developed XLRB, a transformer architecture introducing gated cross‑layer routing of QKV attention and
-                HDIM token‑pair messaging to improve expressivity and feature reuse, reducing overfitting across domains.
+                Developed XLRB, a transformer architecture that reduces redundant parameter reuse by adding gated
+                cross-layer routing of QKV attention and HDIM token-pair messaging for efficient inference and feature
+                propagation.
               </li>
               <li>
                 Built deterministic multi‑GPU training and Nsight profiling pipeline (PyTorch + Celery + Redis) for
                 ablations.
               </li>
               <li>
-                Ran 50+ fully deterministic ablations on GLUE RTE with fixed seeds, early stopping, and reproducible
-                logging.
+                Ran 50+ fully deterministic ablations on GLUE RTE with controlled scheduling and reproducible logging.
               </li>
               <li>
-                Benchmarked on AWS 8×H100 cluster with NCCL; validated via CUDA API summaries and HPC profiling.
+                Benchmarked on AWS 8×H100 clusters with NCCL; validated behavior via CUDA API traces and HPC profiling.
               </li>
             </ul>
           </article>
@@ -73,10 +73,11 @@ function Projects() {
                 Fine‑tuned YOLOv9c model on broadcast soccer for player/ball detection, optimized with TensorRT/ONNX.
               </li>
               <li>
-                Applied cuML‑based KMeans for team clustering and optical flow + Kalman filtering for motion correction.
+                Applied cuML‑based KMeans for team clustering and optical flow + Kalman filtering for motion
+                correction.
               </li>
               <li>
-                Implemented perspective transforms in OpenCV/NumPy to estimate speed and relative distances from feeds.
+                Implemented perspective transforms in OpenCV/NumPy to compute speed and relative distances from feeds.
               </li>
               <li>
                 Integrated DeepSORT + ByteTrack hybrid tracking logic to stabilize multi‑player identities across
@@ -106,13 +107,14 @@ function Projects() {
             </p>
             <ul className="card__bullets">
               <li>
-                Simulated Earth–Mars Hohmann transfers using MATLAB and second‑order ODEs in a three‑body model.
+                Modeled Earth–Mars transfers using second‑order ODEs in a three‑body dynamical system in MATLAB.
               </li>
               <li>
-                Applied RKF and Householder/Danby methods to solve Kepler/Lambert equations and compute minimum Δv.
+                Implemented RKF and Householder/Danby solvers with stable convergence for Kepler and Lambert
+                problems.
               </li>
               <li>
-                Generated 30M+ simulated trajectories to evaluate optimal transfers, validating NASA &apos;24 mission
+                Evaluated 30M+ simulated trajectories to identify optimal transfer windows, validating NASA &apos;24
                 parameters.
               </li>
             </ul>

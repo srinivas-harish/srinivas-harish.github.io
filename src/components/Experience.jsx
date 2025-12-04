@@ -35,17 +35,17 @@ function Experience() {
               <p className="experience-card__meta">Aug 2025 – Present</p>
               <ul className="experience-card__list">
                 <li>
-                  Designed custom sparse 3D CNN backbone with differentiable voxelization and N-node geometric
-                  supervision.
+                  Deployed and optimized ViT and 3D CNN inference with tight latency constraints in Home Depot
+                  warehouses.
                 </li>
                 <li>
-                  Deployed end-to-end LiDAR dimensioning system in production at Home Depot, achieving 0.87cm corner
-                  mAE.
+                  Built and tuned full model execution path including preprocessing, TensorRT optimization, and GPU
+                  serving.
                 </li>
                 <li>
-                  Led development of Dockware’s production LiDAR–CNN training pipeline and ML stack with ex-SpaceX and
-                  Waymo founders, driving architecture for the model, data and training workflows, and the full
-                  inference path.
+                  Led development of Dockware’s production vision transformer inference stack for Vision V4 system with
+                  ex-SpaceX and Waymo founders, driving architecture for model and data workflows, and serving
+                  infrastructure.
                 </li>
                 <li>
                   Engineered multi-stage simulated data pipeline with LiDAR and optical flow, modeling scene dynamics to
@@ -69,27 +69,26 @@ function Experience() {
             </div>
             <div className="experience-card__body">
               <h3 className="experience-card__title">
-                NVIDIA <span>｜ Computer Vision Developer (RTX‑Accelerated CV)</span>
+                NVIDIA <span>｜ Computer Vision Developer (Back-to-School Program)</span>
               </h3>
               <p className="experience-card__meta">Jun 2025 – Jul 2025</p>
               <ul className="experience-card__list">
                 <li>
-                  Contracted by NVIDIA to develop GPU-accelerated computer vision inference pipelines for the RTX 50
-                  Series.
+                  Built latency and throughput optimized model execution pipelines for RTX Blackwell GPUs.
                 </li>
                 <li>
-                  Optimized CUDA graphs and asynchronous execution streams, cutting frame latency from 18.7ms → 9.5ms.
+                  Integrated TensorRT, CUDA Graphs, and mixed precision, reducing inference latency from 18.7ms → 9.5ms.
                 </li>
                 <li>
-                  Integrated TensorRT with mixed precision and cuDNN/cuBLAS, extending pipeline with custom CUDA
-                  kernels.
+                  Profiled GPU workloads with Nsight Systems/Compute + NVTX to analyze scheduling, kernels, and
+                  utilization.
                 </li>
                 <li>
-                  Profiled RTX Blackwell GPUs using Nsight Systems/Compute and NVTX for kernel-level performance tuning.
+                  Reduced CPU–GPU synchronization overhead by restructuring inference into staged CUDA-stream
+                  operations.
                 </li>
                 <li>
-                  Featured on NVIDIA.com: Deployed containerized stack with Docker+FastAPI for RTX demos at NVIDIA
-                  events.
+                  Featured on NVIDIA.com: Deployed containerized inference with Docker+FastAPI for RTX demos at NVIDIA.
                 </li>
               </ul>
             </div>
@@ -114,19 +113,17 @@ function Experience() {
               <ul className="experience-card__list">
                 <li>
                   Designed ALCNet (Attention-Layer Convolutional Net), a hybrid axis-separable 3D CNN over
-                  differentiable attention tensors with residual fusion for spatio-temporal learning; authored
-                  manuscript with NYU faculty.
+                  differentiable attention tensors with modified execution graphs to support the new compute path.
                 </li>
                 <li>
-                  Trained and deployed ALCNet-based model for fine-grained LLM classification in NYU&apos;s writing
-                  program.
+                  Integrated ALCNet with DeBERTa-v3-large and optimized attention processing with cuBLAS-based GEMMs.
                 </li>
                 <li>
-                  Integrated ALCNet atop DeBERTa-v3-large and optimized GPU-backed matrix multiplications with cuBLAS.
+                  Built training infrastructure for spatial/head/layer ablations, enabling deterministic generalization
+                  studies.
                 </li>
                 <li>
-                  Conducted controlled ablation studies (spatial, head, and layer components) quantifying model
-                  generalization.
+                  Deployed ALCNet for LLM-text classification across student submissions in all NYU departments.
                 </li>
               </ul>
             </div>
